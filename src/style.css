@@ -145,7 +145,7 @@ body {
 }
 
 .products {
-  margin-top: 3.2rem;
+  margin: 3.2rem 0;
   text-align: center;
 }
 
@@ -255,7 +255,7 @@ body {
 
 .footer {
   border-top: 1px solid #0000002b;
-  margin-top: 3.2rem;
+  /* margin-top: 3.2rem; */
   padding: 2rem 7.2rem;
 }
 
@@ -318,6 +318,225 @@ footer p {
   padding-top: 2.4rem;
 }
 
+.shop-hero {
+  position: relative;
+  background-image: url("/public/shop.png");
+  height: 30rem;
+}
+
+.shop-hero-container {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+.shop-hero-header {
+  font-size: 4.8rem;
+}
+
+.small-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.small-container p {
+  font-size: 1.6rem;
+}
+
+.small-container-shop {
+  font-weight: 300;
+}
+
+.filter {
+  background: #f9f1e7;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 3.2rem;
+}
+
+.filter-first-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+}
+.filter-first-container p {
+  padding-left: 4rem;
+  border-left: 2px solid #9f9f9f;
+  margin-left: 2rem;
+}
+
+.show-products {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.show-products h3 {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+.show-products input {
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.show-inputs {
+  padding: 0.8rem 1rem;
+  width: 3.5rem;
+}
+
+.sorting-input {
+  padding: 1rem;
+}
+
+.brands {
+  background-color: #faf3ea;
+  margin-top: 3.2rem;
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-icon {
+  font-size: 4.8rem;
+}
+
+.brand-main {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-size: 1.3rem;
+  color: #898989;
+}
+
+.product-nav {
+  background-color: #f9f1e7;
+  padding: 4rem 6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.product-nav h3 {
+  color: #9f9f9f;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+.single-product {
+  padding: 2rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 2rem;
+}
+
+.single-product-name {
+  border-left: 2px solid #9f9f9f;
+  padding-left: 2rem;
+}
+
+.single-product-img {
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+}
+
+.main-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #9f9f9f;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-name {
+  font-size: 4rem;
+}
+
+.main-price {
+  font-size: 2rem;
+  color: #9f9f9f;
+}
+
+.main-desc {
+  width: 40%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.main-size {
+  font-size: 1.4rem;
+  color: #9f9f9f;
+  font-weight: 400;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.violet {
+  background-color: #816dfa;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.black {
+  background-color: #000;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.brown {
+  background-color: #b88e2f;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.main-links {
+  color: #9f9f9f;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.share-icons {
+  color: #000;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -328,7 +547,7 @@ footer p {
     --popover-foreground: 240 10% 3.9%;
     --primary: 42 59% 45%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
+    --secondary: 34, 62%, 95%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
