@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,8 +13,12 @@ const Footer = () => {
         </div>
         <div>
           <h4>Links</h4>
-          <p>home</p>
-          <p>shop</p>
+          <p>
+            <NavLink to="/">home</NavLink>
+          </p>
+          <p>
+            <NavLink to="/shop">shop</NavLink>
+          </p>
           <p>about</p>
           <p>contact</p>
         </div>
@@ -24,7 +29,7 @@ const Footer = () => {
           <p>privacy policies</p>
         </div>
         <div>
-          <h4>Header</h4>
+          <h4>Newsletter</h4>
           <input
             type="email"
             placeholder="Enter Your Email Address"
