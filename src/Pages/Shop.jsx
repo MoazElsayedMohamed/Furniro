@@ -11,7 +11,6 @@ const Shop = () => {
     <div>
       <Header />
       <ShopHero />
-      <Filter />
       <ShopProducts />
       <Brands />
       <Footer />

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { IoMenu } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ openMenu, setOpenMenu }) => {
   return (
     <nav>
-      <ul className="navbar-list">
+      <div onClick={() => setOpenMenu(!openMenu)}>
+        <IoMenu className="menu-bar" />
+      </div>
+      <ul className={openMenu ? "open" : "navbar-list"}>
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
