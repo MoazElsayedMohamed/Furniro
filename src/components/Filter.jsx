@@ -1,17 +1,8 @@
 import React from "react";
 import { FaSlidersH } from "react-icons/fa";
 import { RiApps2Fill } from "react-icons/ri";
-import { useProducts } from "../services/apiProducts";
-import { PAGE_SIZE } from "../../utils/constants";
 
-const Filter = () => {
-  const { products, isLoading } = useProducts();
-  if (isLoading) return <p>Loading...</p>;
-
-  const totalProducts = products.data.length;
-  const startIndex = (1 - 1) * PAGE_SIZE + 1;
-  const endIndex = startIndex + PAGE_SIZE - 1;
-
+const Filter = ({ start, end, totalProducts }) => {
   return (
     <section className="filter">
       <div className="filter-first-container">
@@ -19,7 +10,7 @@ const Filter = () => {
         <h3>Filter</h3>
         <RiApps2Fill />
         <p>
-          Showing {startIndex}-{endIndex} of {totalProducts} results
+          Showing {start}-{end} of {totalProducts} results
         </p>
       </div>
       <div className="show-products">

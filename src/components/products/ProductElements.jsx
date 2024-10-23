@@ -2,9 +2,10 @@ import React from "react";
 import Product from "./Product";
 import { Skeleton } from "../ui/skeleton";
 import { useProducts } from "../../services/apiProducts";
-import { PAGE_SIZE, URL } from "../../../utils/constants";
+import { URL } from "../../../utils/constants";
+import { Link } from "react-router-dom";
 
-const ProductElements = () => {
+const ProductElements = ({ PAGE_SIZE }) => {
   const { products, error, isLoading } = useProducts();
   const currentPage = 1;
 
@@ -19,14 +20,16 @@ const ProductElements = () => {
 
   const productsElements = productsToDisplay.map((product) => {
     return (
-      <Product
-        key={product.id}
-        name={product.attributes.name}
-        imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
-        price={product.attributes.price}
-        discount={product.attributes.discount}
-        shortDesc={product.attributes.short_desc}
-      />
+      <Link to={`/product/${product.id}`}>
+        <Product
+          key={product.id}
+          name={product.attributes.name}
+          imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
+          price={product.attributes.price}
+          discount={product.attributes.discount}
+          shortDesc={product.attributes.short_desc}
+        />
+      </Link>
     );
   });
 

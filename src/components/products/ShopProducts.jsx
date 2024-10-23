@@ -13,6 +13,7 @@ import Product from "./Product";
 import { Skeleton } from "../ui/skeleton";
 import { PAGE_SIZE, URL } from "../../../utils/constants";
 import { Link } from "react-router-dom";
+import Filter from "../Filter";
 
 const ShopProducts = () => {
   const { products, isLoading, error } = useProducts();
@@ -31,6 +32,9 @@ const ShopProducts = () => {
   const adjustedStartPage = Math.max(1, endPage - visiblePages + 1);
 
   // display products in one page
+  const totalProducts = products.data.length;
+  const start = (currentPage - 1) * PAGE_SIZE + 1;
+  const end = start + PAGE_SIZE - 1;
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const productsToDisplay = products.data.slice(startIndex, endIndex);
@@ -77,6 +81,7 @@ const ShopProducts = () => {
 
   return (
     <div>
+      <Filter start={start} end={end} totalProducts={totalProducts} />
       <div className="products-image">{productsElements}</div>
       <Pagination>
         <PaginationContent>

@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <section className="products">
       <h2 className="products-header">our products</h2>
-      <ProductElements />
+      <ProductElements PAGE_SIZE={8} />
       <Link
         className={buttonVariants({ variant: "outline", size: "lg" })}
         to="/shop"
