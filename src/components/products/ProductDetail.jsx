@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { URL } from "../../../utils/constants";
 
 const ProductDetail = ({ product }) => {
   const { name, price, long_desc, sku, size, count, category } =
     product.attributes;
+  const [activeSize, setActiveSize] = useState(size);
+
+  function handleClick(size) {
+    setActiveSize(size);
+  }
+
   return (
     <div>
       <div className="main-details">
@@ -13,13 +20,27 @@ const ProductDetail = ({ product }) => {
         <p className="main-desc">{long_desc}</p>
         <h3 className="main-size">Size</h3>
         <div className="size-buttons">
-          <Button variant="default" className="mr-2" size="sm">
+          <Button
+            variant={activeSize === "L" ? "default" : "ghost"}
+            className="mr-2"
+            size="sm"
+            onClick={() => handleClick("L")}
+          >
             L
           </Button>
-          <Button variant="ghost" className="mr-2" size="sm">
+          <Button
+            variant={activeSize === "XL" ? "default" : "ghost"}
+            className="mr-2"
+            size="sm"
+            onClick={() => handleClick("XL")}
+          >
             XL
           </Button>
-          <Button variant="ghost" size="sm">
+          <Button
+            variant={size === "XS" ? "default" : "ghost"}
+            size="sm"
+            onClick={() => handleClick("XS")}
+          >
             XS
           </Button>
         </div>
@@ -29,7 +50,7 @@ const ProductDetail = ({ product }) => {
           <div className="black"></div>
           <div className="brown"></div>
         </div>
-        <div>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <Button variant="outline1" size="lg">
             add to cart
           </Button>
