@@ -11,16 +11,35 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+}
+ul.open {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 1rem 0;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  z-index: 999;
 }
 
 .header {
   display: flex;
   align-items: center;
-  height: 8rem;
   justify-content: space-around;
+}
+
+.menu-bar {
+  display: none;
+  width: 8rem;
+  height: 2rem;
 }
 
 .logo-container {
@@ -63,18 +82,20 @@ body {
 }
 
 .hero {
+  position: relative;
   height: 90rem;
   background-image: url("/public/hero.jpeg");
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-right: 2rem;
 }
 
 .hero-container {
-  position: relative;
+  position: absolute;
   background-color: #fff3e3;
   width: 50%;
-  left: 50%;
-  top: 30%;
+  right: 5rem;
+  top: 30rem;
   padding: 4rem;
 }
 
@@ -109,7 +130,7 @@ body {
 }
 
 .browse-range {
-  margin-top: 3.2rem;
+  margin: 3.2rem 0 8rem 0;
   text-align: center;
 }
 
@@ -126,22 +147,22 @@ body {
 }
 
 .browse-images {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  gap: 3.2rem;
+  gap: 5rem;
   padding: 1rem 5rem;
 }
 
 .browse-image {
-  width: 100rem;
-  height: 40%;
+  width: 100%;
+  height: 100%;
 }
 
 .image-name {
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 2rem;
+  margin-bottom: 8rem;
 }
 
 .products {
@@ -159,7 +180,7 @@ body {
 .products-image {
   padding: 1rem 2rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 4rem;
   margin-bottom: 5rem;
 }
@@ -255,14 +276,15 @@ body {
 
 .footer {
   border-top: 1px solid #0000002b;
-  /* margin-top: 3.2rem; */
   padding: 2rem 7.2rem;
 }
 
 .main-footer {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  column-gap: 3rem;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
 .footer-main-header {
@@ -397,9 +419,9 @@ footer p {
   background-color: #faf3ea;
   margin-top: 3.2rem;
   padding: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .brand {
@@ -480,7 +502,7 @@ main {
 }
 
 .main-desc {
-  width: 40%;
+  width: 80%;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -535,6 +557,49 @@ main {
   display: flex;
   gap: 1rem;
   cursor: pointer;
+}
+
+.description {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 2rem;
+}
+
+.product-description {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.description-headers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #9f9f9f;
+  cursor: pointer;
+}
+
+.description-content {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #9f9f9f;
+  margin-bottom: 2rem;
+}
+
+.active {
+  color: #000;
+}
+
+.related-products {
+  padding-bottom: 4rem;
+}
+
+.related-header {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 @layer base {
