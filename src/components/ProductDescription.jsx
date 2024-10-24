@@ -2,17 +2,14 @@ import React, { useState } from "react";
 
 const ProductDescription = ({ product }) => {
   const { content } = product.attributes;
+  const { content: reviewsContent } =
+    product.attributes.reviews.data[0].attributes;
+  const reviewsCount = product.attributes.reviews.data.length;
+
   const [reviews, setReviews] = useState(false);
-  const [description, setDescription] = useState(false);
 
   function ReviewsContent() {
-    return (
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quod iure
-        qui aliquam cupiditate esse odio nisi fugit labore exercitationem, nam
-        neque. Expedita nam eos dicta earum corrupti inventore ex.
-      </p>
-    );
+    return <p>{reviewsContent}</p>;
   }
 
   function handleClick() {
@@ -20,17 +17,17 @@ const ProductDescription = ({ product }) => {
   }
 
   return (
-    <section className="description">
-      <div className="product-description">
-        <div className="description-headers">
+    <section className="border-b border-gray-300 pb-8">
+      <div className="w-9/12  m-auto">
+        <div className="flex items-center justify-center gap-16 text-3xl mb-4 text-muted cursor-pointer">
           <h1 className={reviews ? "" : "active"} onClick={handleClick}>
             Description
           </h1>
           <h1 onClick={handleClick} className={reviews ? "active" : ""}>
-            Reviews
+            Reviews[{reviewsCount}]
           </h1>
         </div>
-        <p className="description-content">
+        <p className="text-lg leading-8 text-muted mb-8">
           {reviews ? <ReviewsContent /> : content}
         </p>
         <img src="/Group.png" alt="" />

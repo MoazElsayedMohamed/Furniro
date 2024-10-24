@@ -4,7 +4,7 @@ import "./media.css";
 import HomePage from "./Pages/HomePage";
 import Shop from "./Pages/Shop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SingleProduct from "./components/products/SingleProduct";
+import SingleProduct from "./Pages/SingleProduct";
 
 const App = () => {
   const router = createBrowserRouter([
