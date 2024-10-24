@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
 export const theme = {
+  screens: {
+    "2xl": "1400px",
+    sm: "200px",
+    xl: "680px",
+  },
   container: {
     center: true,
     padding: "2rem",
-    screens: {
-      "2xl": "1400px",
-    },
   },
   extend: {
     colors: {
