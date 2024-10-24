@@ -5,8 +5,8 @@ import NavIcons from "./NavIcons";
 
 const Header = ({ openMenu, setOpenMenu }) => {
   return (
-    <header className="header">
-      <div className="logo-container">
+    <header className="flex items-center justify-around">
+      <div className="flex items-center">
         <Logo />
         <h2 className="logo-header">Furniro</h2>
       </div>

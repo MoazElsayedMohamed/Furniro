@@ -8,15 +8,25 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
       <div onClick={() => setOpenMenu(!openMenu)}>
         <IoMenu className="menu-bar" />
       </div>
-      <ul className={openMenu ? "open" : "navbar-list"}>
+      <ul
+        className={
+          openMenu
+            ? "open"
+            : "flex list-none items-center gap-14 text-2xl cursor-pointer"
+        }
+      >
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className="hover:text-primary">
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/shop" className="hover:text-primary">
+            Shop
+          </NavLink>
         </li>
-        <li>About</li>
-        <li>Contact</li>
+        <li className="hover:text-primary">About</li>
+        <li className="hover:text-primary">Contact</li>
       </ul>
     </nav>
   );

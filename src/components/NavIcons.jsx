@@ -5,10 +5,10 @@ import { CiHeart, CiSearch, CiShoppingCart } from "react-icons/ci";
 const NavIcons = () => {
   return (
     <nav className="nav-icons">
-      <BsPersonExclamation className="nav-icon" />
-      <CiSearch className="nav-icon" />
-      <CiHeart className="nav-icon" />
-      <CiShoppingCart className="nav-icon" />
+      <BsPersonExclamation className="w-10 h-8" />
+      <CiSearch className="w-10 h-8" />
+      <CiHeart className="w-10 h-8" />
+      <CiShoppingCart className="w-10 h-8" />
     </nav>
   );
 };

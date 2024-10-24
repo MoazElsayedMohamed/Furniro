@@ -20,9 +20,9 @@ const Categories = () => {
   });
 
   return (
-    <section className="browse-range">
-      <h3 className="browse-range-header">browse the range</h3>
-      <p className="browse-range-text">
+    <section className="mt-14 mb-28 text-center">
+      <h3 className="text-5xl uppercase font-bold mb-8">browse the range</h3>
+      <p className="text-2xl mb-6">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Exercitationem, ad incidunt nihil
       </p>
