@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { URL } from "../../../utils/constants";
 import { IoStar } from "react-icons/io5";
+import { useProducts } from "../../services/apiProducts";
+import { useCart } from "../../context/CartContext";
 
 const ProductDetail = ({ product }) => {
+  const { addToCart } = useCart();
+  const { products } = useProducts();
   const { name, price, long_desc, sku, size, count, category } =
     product.attributes;
   const { name: tagName } = product.attributes.tag.data[0].attributes;
@@ -94,7 +97,12 @@ const ProductDetail = ({ product }) => {
             <p>{productCount}</p>
             <p onClick={handleCountIncrease}>+</p>
           </Button>
-          <Button variant="outline1" size="xl">
+
+          <Button
+            variant="outline1"
+            size="xl"
+            onClick={() => addToCart(product)}
+          >
             add to cart
           </Button>
           <Button variant="outline1" size="xl">

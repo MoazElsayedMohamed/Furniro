@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { CiHeart, CiShare1 } from "react-icons/ci";
 import { MdOutlineCompareArrows } from "react-icons/md";
+import { useCart } from "../../context/CartContext";
 
-const Product = ({ imageUrl, name, price, discount, shortDesc }) => {
+const Product = ({ imageUrl, name, price, discount, shortDesc, product }) => {
   const [isHovering, setIsHovering] = useState(false);
+  const { addToCart } = useCart();
 
   function handleMouseOver() {
     setIsHovering(true);
@@ -21,7 +23,10 @@ const Product = ({ imageUrl, name, price, discount, shortDesc }) => {
     >
       {isHovering && (
         <div className="hovering-card">
-          <button className="bg-white text-primary py-4 px-6 text-3xl font-bold border-none absolute left-1/4 top-1/3 uppercase">
+          <button
+            className="bg-white text-primary py-4 px-6 text-3xl font-bold border-none absolute left-1/4 top-1/3 uppercase"
+            onClick={() => addToCart(product)}
+          >
             add to cart
           </button>
           <div className="flex items-center gap-4 text-white absolute top-1/2 text-2xl pl-12">
