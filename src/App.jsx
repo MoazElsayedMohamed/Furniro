@@ -5,6 +5,8 @@ import HomePage from "./Pages/HomePage";
 import Shop from "./Pages/Shop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SingleProduct from "./Pages/SingleProduct";
+import Cart from "./Pages/Cart";
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -20,11 +22,17 @@ const App = () => {
       path: "/product/:id",
       element: <SingleProduct />,
     },
+    {
+      path: "/cart",
+      element: <Cart />,
+    },
   ]);
 
   return (
     <>
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </>
   );
 };

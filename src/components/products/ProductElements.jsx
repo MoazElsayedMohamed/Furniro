@@ -22,6 +22,7 @@ const ProductElements = ({ PAGE_SIZE }) => {
     return (
       <Link to={`/product/${product.id}`}>
         <Product
+          product={product}
           key={product.id}
           name={product.attributes.name}
           imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
