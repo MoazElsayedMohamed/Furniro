@@ -6,13 +6,13 @@ const ShopHero = () => {
   return (
     <section className="shop-hero">
       <div className="shop-hero-container">
-        <h1 className="shop-hero-header">Shop</h1>
-        <div className="small-container">
-          <p className="small-container-home">
+        <h1 className="text-7xl ">Shop</h1>
+        <div className="flex items-center gap-4">
+          <p className="text-3xl font-semibold">
             <NavLink to="/">Home</NavLink>
           </p>
           <FaChevronRight />
-          <p className="small-container-shop">
+          <p className="text-3xl font-light">
             <NavLink to="/shop">Shop</NavLink>
           </p>
         </div>

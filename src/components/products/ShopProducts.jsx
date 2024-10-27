@@ -37,7 +37,6 @@ const ShopProducts = () => {
   const end = start + PAGE_SIZE - 1;
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
-  const productsToDisplay = products.data.slice(startIndex, endIndex);
 
   function nextPage() {
     if (currentPage < totalPages) {
@@ -63,26 +62,64 @@ const ShopProducts = () => {
     return pageNumbers;
   };
 
-  const productsElements = productsToDisplay.map((product) => {
+  function SortElements() {
+    const [sortOption, setSortOption] = useState("price-asc");
+
+    function handleChange(e) {
+      setSortOption(e.target.value);
+    }
+
+    const sortedProducts = [
+      products.data.sort((a, b) => {
+        if (sortOption === "price-asc") {
+          return a.attributes.price - b.attributes.price;
+        } else if (sortOption === "price-dsc") {
+          return b.attributes.price - a.attributes.price;
+        } else if (sortOption === "name-asc") {
+          return a.attributes.name.localeCompare(b.attributes.name);
+        } else if (sortOption === "name-dsc") {
+          return b.attributes.name.localeCompare(a.attributes.name);
+        }
+        return 0;
+      }),
+    ];
+
+    const sortedToDisplay = sortedProducts[0].slice(startIndex, endIndex);
+
+    const productsElements = sortedToDisplay.map((product) => {
+      return (
+        <Link to={`/product/${product.id}`}>
+          <Product
+            key={product.id}
+            id={product.id}
+            name={product.attributes.name}
+            imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
+            price={product.attributes.price}
+            discount={product.attributes.discount}
+            shortDesc={product.attributes.short_desc}
+          />
+        </Link>
+      );
+    });
+
     return (
-      <Link to={`/product/${product.id}`}>
-        <Product
-          key={product.id}
-          id={product.id}
-          name={product.attributes.name}
-          imageUrl={`${URL}${product.attributes.image.data.attributes.url}`}
-          price={product.attributes.price}
-          discount={product.attributes.discount}
-          shortDesc={product.attributes.short_desc}
+      <>
+        <Filter
+          start={start}
+          end={end}
+          totalProducts={totalProducts}
+          handleChange={handleChange}
+          sortOption={sortOption}
         />
-      </Link>
+
+        <div className="products-image">{productsElements}</div>
+      </>
     );
-  });
+  }
 
   return (
     <div>
-      <Filter start={start} end={end} totalProducts={totalProducts} />
-      <div className="products-image">{productsElements}</div>
+      <SortElements />
       <Pagination>
         <PaginationContent>
           {renderPageNumbers()}

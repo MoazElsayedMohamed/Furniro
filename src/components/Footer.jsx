@@ -3,43 +3,68 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="border-t border-gray-300 mt-8 py-8 px-32">
       <div className="main-footer">
         <div>
-          <h3 className="footer-main-header">Furniro.</h3>
-          <p className="footer-text">
+          <h3 className="text-5xl font-bold mb-8">Furniro.</h3>
+          <p className="text-gray-400 font-semibold w-3/4 text-2xl">
             400 University Drive Suite 200 Coral Gables, FL 33134 USA
           </p>
         </div>
         <div>
-          <h4>Links</h4>
+          <h4 className="text-gray-400 font-bold text-2xl mb-8">Links</h4>
           <p>
-            <NavLink to="/">home</NavLink>
+            <NavLink
+              to="/"
+              className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary"
+            >
+              home
+            </NavLink>
           </p>
           <p>
-            <NavLink to="/shop">shop</NavLink>
+            <NavLink
+              to="/shop"
+              className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary"
+            >
+              shop
+            </NavLink>
           </p>
-          <p>about</p>
-          <p>contact</p>
+          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
+            about
+          </p>
+          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
+            contact
+          </p>
         </div>
         <div>
-          <h4>Help</h4>
-          <p>payment options</p>
-          <p>returns</p>
-          <p>privacy policies</p>
+          <h4 className="text-gray-400 font-bold text-2xl mb-8">Help</h4>
+          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
+            payment options
+          </p>
+          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
+            returns
+          </p>
+          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
+            privacy policies
+          </p>
         </div>
         <div>
-          <h4>Newsletter</h4>
+          <h4 className="text-gray-400 font-bold text-2xl mb-8">Newsletter</h4>
           <input
             type="email"
             placeholder="Enter Your Email Address"
-            className="footer-input"
+            className="outline-none  border-b border-black mt-4 pb-3 text-xl placeholder:text-gray-400 placeholder:font-normal
+            "
           />
-          <button className="footer-input button">subscribe</button>
+          <button className="outline-none  border-b border-black mt-4 pb-3 text-2xl uppercase ml-4 cursor-pointer font-semibold">
+            subscribe
+          </button>
         </div>
       </div>
-      <div className="bottom-footer">
-        <p>2023 furino. All rights reverved</p>
+      <div className="border-t border-gray-500 pt-10">
+        <p className="text-2xl font-semibold">
+          2023 furino. All rights reverved
+        </p>
       </div>
     </footer>
   );
