@@ -71,9 +71,11 @@ const ShoppingCart = ({ handleOpenCard }) => {
                 Cart
               </Button>
             </Link>
-            <Button variant="outline2" size="cardSize">
-              Checkout
-            </Button>
+            <Link to="/checkout">
+              <Button variant="outline2" size="cardSize">
+                Checkout
+              </Button>
+            </Link>
             <Button variant="outline2" size="cardSize">
               Comparison
             </Button>

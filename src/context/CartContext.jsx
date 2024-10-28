@@ -24,9 +24,17 @@ const CartProvider = ({ children }) => {
     Math.floor(item.attributes.price * item.attributes.count)
   );
 
+  function items() {
+    const item = cartItems.map((item) => {
+      const { name, price, count } = item.attributes;
+      return { name, price, count };
+    });
+    return item;
+  }
+
   return (
     <CartContext.Provider
-      value={{ addToCart, cartItems, deleteCart, totalPrice, subtotal }}
+      value={{ addToCart, cartItems, deleteCart, totalPrice, subtotal, items }}
     >
       {children}
     </CartContext.Provider>

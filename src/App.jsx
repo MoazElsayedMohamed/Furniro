@@ -7,8 +7,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SingleProduct from "./Pages/SingleProduct";
 import Cart from "./Pages/Cart";
 import { CartProvider } from "./context/CartContext";
+import Checkout from "./Pages/Checkout";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
-const App = () => {
+const App = ({ queryClient }) => {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -25,6 +28,18 @@ const App = () => {
     {
       path: "/cart",
       element: <Cart />,
+    },
+    {
+      path: "/checkout",
+      element: <Checkout />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ]);
 
