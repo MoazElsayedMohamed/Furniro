@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="text-gray-400 font-bold text-2xl mb-8">Links</h4>
-          <p>
+          <p className="mb-8">
             <NavLink
               to="/"
               className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary"
@@ -21,7 +21,7 @@ const Footer = () => {
               home
             </NavLink>
           </p>
-          <p>
+          <p className="mb-8">
             <NavLink
               to="/shop"
               className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary"

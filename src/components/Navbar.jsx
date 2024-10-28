@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 
 const Navbar = ({ openMenu, setOpenMenu }) => {
   return (
-    <nav>
+    <nav className="">
       <div onClick={() => setOpenMenu(!openMenu)}>
         <IoMenu className="menu-bar" />
       </div>
@@ -12,7 +12,7 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
         className={
           openMenu
             ? "open"
-            : "flex list-none items-center gap-14 text-2xl cursor-pointer"
+            : "flex list-none items-center gap-14 text-2xl cursor-pointer sm:max-phone:hidden"
         }
       >
         <li>
