@@ -32,8 +32,13 @@ const Footer = () => {
           <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
             about
           </p>
-          <p className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary">
-            contact
+          <p>
+            <NavLink
+              className="text-2xl font-bold cursor-pointer capitalize mb-8 hover:text-primary"
+              to="/contact"
+            >
+              contact
+            </NavLink>
           </p>
         </div>
         <div>

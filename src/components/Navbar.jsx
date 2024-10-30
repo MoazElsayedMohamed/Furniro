@@ -26,7 +26,11 @@ const Navbar = ({ openMenu, setOpenMenu }) => {
           </NavLink>
         </li>
         <li className="hover:text-primary">About</li>
-        <li className="hover:text-primary">Contact</li>
+        <li>
+          <NavLink to="/contact" className="hover:text-primary">
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
