@@ -10,6 +10,10 @@ import { CartProvider } from "./context/CartContext";
 import Checkout from "./Pages/Checkout";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import { PasswordProvider } from "./context/PasswordContext";
+import Contact from "./Pages/Contact";
+import { Toaster } from "sonner";
+import { AuthProvider } from "./context/AuthContext";
 
 const App = ({ queryClient }) => {
   const router = createBrowserRouter([
@@ -34,6 +38,10 @@ const App = ({ queryClient }) => {
       element: <Checkout />,
     },
     {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
       path: "/login",
       element: <Login />,
     },
@@ -45,9 +53,14 @@ const App = ({ queryClient }) => {
 
   return (
     <>
-      <CartProvider>
-        <RouterProvider router={router} />
-      </CartProvider>
+      <AuthProvider>
+        <CartProvider>
+          <PasswordProvider>
+            <RouterProvider router={router} />
+          </PasswordProvider>
+        </CartProvider>
+      </AuthProvider>
+      <Toaster />
     </>
   );
 };
