@@ -1,20 +1,20 @@
 import React from "react";
 import Header from "../components/Header";
+import CustomHero from "../components/CustomHero";
 import Brands from "../components/Brands";
 import Footer from "../components/Footer";
-import CartDetails from "../components/CartDetails";
-import CustomHero from "../components/CustomHero";
+import MainContact from "../components/MainContact";
 
-const Cart = () => {
+const Contact = () => {
   return (
     <div>
       <Header />
-      <CustomHero pageName="Cart" />
-      <CartDetails />
+      <CustomHero pageName="Contact" />
+      <MainContact />
       <Brands />
       <Footer />
     </div>
   );
 };
 
-export default Cart;
+export default Contact;
