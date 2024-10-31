@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdAccessTimeFilled } from "react-icons/md";
 import FormRow from "./FormRow";
 import { Button } from "./ui/button";
-import { URL } from "../../utils/constants";
+import { toast } from "sonner";
 
 const MainContact = () => {
   const [contactData, setContactData] = useState({
@@ -31,6 +31,7 @@ const MainContact = () => {
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
+      toast.success("Your data is submitted successfully");
 
       return data;
     } catch (error) {

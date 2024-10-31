@@ -5,9 +5,11 @@ import { URL } from "../../utils/constants";
 import { IoIosCloseCircle } from "react-icons/io";
 import { Button } from "./ui/button";
 import { Link, useNavigate } from "react-router-dom";
+import { useProduct } from "../context/ProductContext";
 
 const ShoppingCart = ({ handleOpenCard }) => {
   const { cartItems, deleteCart, totalPrice } = useCart();
+  const { productCount } = useProduct();
 
   return (
     <>
@@ -38,7 +40,7 @@ const ShoppingCart = ({ handleOpenCard }) => {
                           {item.attributes.name}
                         </h3>
                         <div className="flex items-center gap-4 text-2xl">
-                          <p>{item.attributes.count}</p>
+                          <p>{productCount}</p>
                           <p>X</p>
                           <p className="text-primary font-semibold">
                             Rs.{item.attributes.price}.000.00

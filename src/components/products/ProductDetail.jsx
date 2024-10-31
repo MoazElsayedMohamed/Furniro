@@ -4,29 +4,33 @@ import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { useProducts } from "../../services/apiProducts";
 import { useCart } from "../../context/CartContext";
+import { useProduct } from "../../context/ProductContext";
+import { useAuth } from "../../context/AuthContext";
+import { toast } from "sonner";
 
 const ProductDetail = ({ product }) => {
   const { addToCart } = useCart();
-  const { products } = useProducts();
+  const { token, username } = useAuth();
+  const { productCount, handleCountDecrease, handleCountIncrease } =
+    useProduct();
+  let tag = product.attributes.tag.data;
+  if (tag.length === 1) {
+    tag = tag[0];
+  }
   const { name, price, long_desc, sku, size, count, category } =
     product.attributes;
-  const { name: tagName } = product.attributes.tag.data[0].attributes;
+  const { name: tagName } = tag.attributes;
   const { name: categoryName } = product.attributes.category.data.attributes;
   const { rating } = product.attributes.reviews.data[0].attributes;
   const reviewsCount = product.attributes.reviews.data.length;
   const [activeSize, setActiveSize] = useState(size);
-  const [productCount, setProductCount] = useState(1);
 
   function handleClick(size) {
-    setActiveSize(size);
-  }
-
-  function handleCountIncrease() {
-    setProductCount(productCount + 1);
-  }
-
-  function handleCountDecrease() {
-    if (productCount > 1) setProductCount(productCount - 1);
+    if (token && username) {
+      setActiveSize(size);
+    } else {
+      toast.error("You can't change size. you must log in first ");
+    }
   }
 
   const StarRating = ({ numberOfStars }) => {

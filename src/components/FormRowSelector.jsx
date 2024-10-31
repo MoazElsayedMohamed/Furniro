@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormRowSelector = ({ id, label, option }) => {
+const FormRowSelector = ({ id, label, option, onChange }) => {
   return (
     <div>
       <label
@@ -9,7 +9,10 @@ const FormRowSelector = ({ id, label, option }) => {
       >
         {label}
       </label>
-      <select className="block  h-16 border border-gray-300 rounded-xl outline-none text-xl mt-4 mb-6 capitalize p-4 sm:max-phone:h-12 w-full text-gray-500">
+      <select
+        className="block  h-16 border border-gray-300 rounded-xl outline-none text-xl mt-4 mb-6 capitalize p-4 sm:max-phone:h-12 w-full text-gray-500"
+        onChange={onChange}
+      >
         <option value="">{option}</option>
       </select>
     </div>

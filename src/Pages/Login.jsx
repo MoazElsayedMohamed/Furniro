@@ -28,12 +28,13 @@ const Login = () => {
       const jwt = data.jwt;
       const user = data.user;
       localStorage.setItem("token", jwt);
+      localStorage.setItem("username", user.username);
 
       if (response.ok) {
-        toast.success("logged in successfully");
-        navigate("/");
+        toast.success("login successfully");
+        window.location.replace("/");
       } else {
-        toast.error("logged in failed");
+        toast.error("login failed. Please check email and password again");
       }
     } catch (error) {
       console.error(error);

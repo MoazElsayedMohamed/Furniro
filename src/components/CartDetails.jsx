@@ -4,9 +4,11 @@ import { URL } from "../../utils/constants";
 import { FaTrash } from "react-icons/fa";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { useProduct } from "../context/ProductContext";
 
 const CartDetails = () => {
-  const { cartItems, deleteCart, totalPrice } = useCart();
+  const { cartItems, totalPrice } = useCart();
+  const { productCount } = useProduct();
   return (
     <div className="p-24 flex gap-8 sm:max-phone:flex-col sm:max-phone:p-2 sm:max-phone:items-center ">
       <table className="w-full h-28">
@@ -20,8 +22,7 @@ const CartDetails = () => {
         </tr>
         {cartItems.length > 0 ? (
           cartItems.map((item) => {
-            const { price, count, name } = item.attributes;
-            const subtotal = Math.floor(price * count);
+            const { price, name } = item.attributes;
             return (
               <tr className="sm:max-phone:text-base">
                 <td className="w-1/3 py-8">
@@ -38,11 +39,11 @@ const CartDetails = () => {
                 </td>
                 <td className="text-center">
                   <h3 className="border text-2xl w-1/5 rounded-lg sm:max-phone:text-base">
-                    {count}
+                    {productCount}
                   </h3>
                 </td>
                 <td className="text-2xl sm:max-phone:text-base">
-                  Rs.{subtotal}.000.00{" "}
+                  Rs.{totalPrice()}.000.00{" "}
                 </td>
                 <td>
                   <FaTrash className="hover:text-primary cursor-pointer w-8 h-6 sm:max-phone:w-4 sm:max-phone:h-3" />

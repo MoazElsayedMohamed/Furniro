@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 const ProductDescription = ({ product }) => {
   const { content } = product.attributes;
+
   const { content: reviewsContent } =
     product.attributes.reviews.data[0].attributes;
   const reviewsCount = product.attributes.reviews.data.length;
+  console.log(reviewsContent);
 
   const [reviews, setReviews] = useState(false);
 
@@ -23,6 +25,7 @@ const ProductDescription = ({ product }) => {
           <h1 className={reviews ? "" : "active"} onClick={handleClick}>
             Description
           </h1>
+
           <h1 onClick={handleClick} className={reviews ? "active" : ""}>
             Reviews[{reviewsCount}]
           </h1>
