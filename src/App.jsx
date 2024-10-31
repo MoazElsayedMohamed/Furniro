@@ -14,6 +14,7 @@ import { PasswordProvider } from "./context/PasswordContext";
 import Contact from "./Pages/Contact";
 import { Toaster } from "sonner";
 import { AuthProvider } from "./context/AuthContext";
+import { ProductProvider } from "./context/ProductContext";
 
 const App = ({ queryClient }) => {
   const router = createBrowserRouter([
@@ -54,11 +55,13 @@ const App = ({ queryClient }) => {
   return (
     <>
       <AuthProvider>
-        <CartProvider>
-          <PasswordProvider>
-            <RouterProvider router={router} />
-          </PasswordProvider>
-        </CartProvider>
+        <ProductProvider>
+          <CartProvider>
+            <PasswordProvider>
+              <RouterProvider router={router} />
+            </PasswordProvider>
+          </CartProvider>
+        </ProductProvider>
       </AuthProvider>
       <Toaster />
     </>
