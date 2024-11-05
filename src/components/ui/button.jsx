@@ -17,7 +17,8 @@ const buttonVariants = cva(
           "border border-primary bg-none text-primary hover:bg-primary hover:text-card ",
         outline1:
           "border border-black rounded-xl mr-4 text-xl capitalize mt-4 outline-none",
-        outline2: "border border-black rounded-3xl text-xl py-2 px-10 mr-6",
+        outline2:
+          "border border-black rounded-3xl text-xl py-2 px-10 mr-6 sm:max-xl:text-lg sm:max-xl:px-5 sm:max-xl:mb-4",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost:

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const ShopHero = () => {
   return (
     <section className="shop-hero">
-      <div className="shop-hero-container">
+      <div className="flex flex-col items-center justify-center relative top-[10rem] gap-8 ">
         <h1 className="text-7xl ">Shop</h1>
         <div className="flex items-center gap-4">
           <p className="text-3xl font-semibold">

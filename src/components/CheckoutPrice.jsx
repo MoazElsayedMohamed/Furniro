@@ -12,8 +12,8 @@ const CheckoutPrice = ({ handleSubmit }) => {
   const { name, price, count } = item;
 
   return (
-    <div className="w-5/12">
-      <div className="flex gap-80 border-b border-gray-300 pb-4">
+    <div className="w-5/12 sm:max-xl:w-full">
+      <div className="flex justify-between border-b border-gray-300 pb-4">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl font-semibold capitalize">product</h1>
           {item.length > 1 ? (

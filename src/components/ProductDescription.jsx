@@ -33,7 +33,7 @@ const ProductDescription = ({ product }) => {
         <p className="text-lg leading-8 text-muted mb-8">
           {reviews ? <ReviewsContent /> : content}
         </p>
-        <img src="/Group.png" alt="" />
+        <img src="/Group.png" className="sm:max-lg:h-[8rem]" />
       </div>
     </section>
   );

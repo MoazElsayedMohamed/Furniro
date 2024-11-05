@@ -40,16 +40,18 @@ const MainContact = () => {
   }
 
   return (
-    <section className="py-36 px-52">
-      <h2 className="text-6xl font-bold text-center mb-4">Get in Touch</h2>
+    <section className="py-36 px-52 sm:max-xl:px-32 sm:max-xl:py-20">
+      <h2 className="text-6xl font-bold text-center mb-4 sm:max-xl:text-4xl">
+        Get in Touch
+      </h2>
       <div className="text-center mb-16">
-        <p className=" text-lg font-light text-gray-500">
+        <p className=" text-lg font-light text-gray-500 sm:max-xl:text-base">
           For More Information About Our Product & Services. Please Feel Free To
           Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
           Hesitate!
         </p>
       </div>
-      <div className="flex gap-32 justify-center">
+      <div className="flex gap-32 justify-center sm:max-xl:flex-col sm:max-xl:gap-8">
         <div className="flex flex-col gap-8">
           <ContactInfo
             icon={<FaLocationDot />}
@@ -69,7 +71,7 @@ const MainContact = () => {
             text2="Saturday-Sunday: 9:00 - 21:00"
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 sm:max-xl:w-full">
           <form onSubmit={handleSubmit}>
             <FormRow
               id="name"

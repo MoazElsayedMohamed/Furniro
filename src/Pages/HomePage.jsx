@@ -6,11 +6,10 @@ import Products from "../components/products/Products";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
-  const [openMenu, setOpenMenu] = useState(false);
   return (
     <div>
-      <Header openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      <Hero openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <Header />
+      <Hero />
       <Categories />
       <Products />
       <Footer />
