@@ -17,7 +17,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { ProductProvider } from "./context/ProductContext";
 import { ShopProductsProvider } from "./context/ShopProductsContext";
 
-const App = ({ queryClient }) => {
+const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",

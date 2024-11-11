@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import { Form, Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import FormRow from "../components/FormRow";
 import { usePassword } from "../context/PasswordContext";
@@ -10,7 +10,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { showPassword, handleClick } = usePassword();
-  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -48,11 +47,11 @@ const Login = () => {
         <img
           src="/hero.jpeg"
           alt="hero-img"
-          className="relative sm:max-phone:h-[120vh]"
+          className="relative sm:max-xl:h-[120vh]"
         />
-        <div className="bg-white rounded-xl shadow-md py-16 px-24 absolute left-1/3 top-1/4 w-1/3 sm:max-phone:px-8 sm:max-phone:py-8 sm:max-phone:w-5/6 sm:max-phone:left-[10%] sm:max-phone:top-[15%] ">
-          <form className="mb-32 sm:max-phone:mb-16" onSubmit={handleSubmit}>
-            <h1 className="text-5xl mb-12 sm:max-phone:text-3xl">Sign in</h1>
+        <div className="bg-white rounded-xl shadow-md py-16 px-24 absolute left-1/3 top-1/4 w-1/3 sm:max-xl:px-8 sm:max-xl:py-8 sm:max-lg:w-5/6 lg:max-sm-tablet:w-4/6 sm-tablet:max-xl:w-3/6 xl:max-2xl:w-1/2 sm-tablet:max-xl:left-[25%] lg:max-xl:left-[20%] sm:max-lg:left-[10%] sm:max-2xl:top-[15%] xl:max-2xl:left-[25%] ">
+          <form className="mb-32 sm:max-xl:mb-16" onSubmit={handleSubmit}>
+            <h1 className="text-5xl mb-12 sm:max-xl:text-3xl">Sign in</h1>
 
             <FormRow
               id="identifier"

@@ -20,20 +20,14 @@ ul.open {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   gap: 5px;
-  padding: 1rem 0;
+  padding: 1rem 4rem;
   width: 100%;
-  left: 0;
+  left: 0%;
   background: #fff;
   z-index: 999;
-}
-
-.menu-bar {
-  display: none;
-  width: 8rem;
-  height: 2rem;
+  height: 25vh;
 }
 
 .logo {
@@ -64,30 +58,6 @@ ul.open {
   background-repeat: no-repeat;
   background-size: cover;
   padding-right: 2rem;
-}
-
-.hero-container {
-  position: absolute;
-  background-color: #fff3e3;
-  width: 50%;
-  right: 5rem;
-  top: 30rem;
-  padding: 4rem;
-}
-
-.hero-new {
-  text-transform: capitalize;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.hero-header {
-  text-transform: uppercase;
-  font-size: 5rem;
-  width: 85%;
-  color: #b88e2f;
-  margin: 0;
-  font-weight: 700;
 }
 
 .hero-text {
@@ -143,62 +113,6 @@ ul.open {
   position: relative;
   background-image: url("/public/shop.png");
   height: 30rem;
-}
-
-.shop-hero-container {
-  position: absolute;
-  top: 40%;
-  left: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.filter {
-  background: #f9f1e7;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 3.2rem;
-}
-
-.filter-first-container {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-}
-.filter-first-container p {
-  padding-left: 4rem;
-  border-left: 2px solid #9f9f9f;
-  margin-left: 2rem;
-}
-
-.show-products {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.show-products h3 {
-  font-size: 1.6rem;
-  text-transform: capitalize;
-}
-.show-products input {
-  font-size: 1.4rem;
-  outline: none;
-}
-
-.show-inputs {
-  padding: 0.8rem 1rem;
-  width: 3.5rem;
-}
-
-.sorting-input {
-  padding: 1rem;
-  width: 10rem;
 }
 
 .brands {

@@ -1,15 +1,4 @@
 @media (max-width: 680px) {
-  .menu-bar {
-    display: flex;
-  }
-  .navbar-list {
-    display: none;
-  }
-
-  .nav-icons {
-    display: none;
-  }
-
   .header {
     padding: 1rem;
     justify-content: space-between;

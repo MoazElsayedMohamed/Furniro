@@ -24,7 +24,7 @@ const CartDetails = () => {
           cartItems.map((item) => {
             const { price, name } = item.attributes;
             return (
-              <tr className="sm:max-xl:text-base">
+              <tr className="sm:max-xl:text-base" key={item}>
                 <td className="w-1/3 py-8">
                   <img
                     src={`${URL}${item.attributes.image.data.attributes.url}`}

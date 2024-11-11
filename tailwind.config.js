@@ -4,13 +4,26 @@ export const theme = {
   screens: {
     "2xl": "1400px",
     sm: "200px",
-    xl: "680px",
+    xs: "320px",
+    md: "380px",
+    lg: "440px",
+    "sm-tablet": "680px",
+    xl: "770px",
+    "2-xl": "1100px",
+    start: "0px",
+    phone: "340px",
   },
   container: {
     center: true,
     padding: "2rem",
   },
   extend: {
+    autofitGrid: {
+      "auto-fit": "repeat(auto-fit, minmax(200px, 1fr))",
+    },
+    backgroundImage: {
+      signIn: "url('/hero.png')",
+    },
     colors: {
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",

@@ -20,8 +20,8 @@ const CheckoutPrice = ({ handleSubmit }) => {
             item.map((item) => {
               const name = item.name;
               return (
-                <h2 className="text-2xl">
-                  <span className="text-gray-400 mr-4">{name}</span> x{" "}
+                <h2 className="text-2xl" key={item}>
+                  <span className="text-gray-400 mr-4">{name}</span> x
                   {productCount}
                 </h2>
               );
@@ -48,7 +48,7 @@ const CheckoutPrice = ({ handleSubmit }) => {
             item.map((item) => {
               const price = item.price;
               return (
-                <h1 className="text-2xl">
+                <h1 className="text-2xl" key={item}>
                   Rs.{price ? Math.floor(price * productCount) : 0}.000.00
                 </h1>
               );

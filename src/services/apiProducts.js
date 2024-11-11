@@ -3,7 +3,7 @@ import { URL } from "../../utils/constants";
 
 async function getProducts() {
   const response = await fetch(
-    `${URL}/api/products?pagination[page]=1&pagination[pageSize]=100&populate=image&sort=name`
+    `${URL}/api/products?pagination[page]=1&pagination[pageSize]=100&populate[0]=image&sort=name&populate[1]=reviews&populate[2]=tag&populate[3]=category`
   );
 
   if (!response.ok) {
@@ -23,19 +23,6 @@ export function useProducts() {
     queryKey: ["product"],
     queryFn: getProducts,
   });
-
-  if (isLoading) {
-    console.log("Loading products...");
-  }
-
-  if (error) {
-    console.error("Error fetching products:", error);
-  }
-
-  // Log only when categories are available
-  if (products) {
-    console.log("Products data:", products);
-  }
 
   return { products, error, isLoading };
 }
