@@ -5,7 +5,8 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Supabase](https://img.shields.io/badge/Strapi-blue?style=for-the-badge&logo=strapi&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
-![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=React_Query&logoColor=white)
+![React Query](https://img.shields.io/badge/React_Query-FA4032?style=for-the-badge&logo=React_Query&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-102C57?style=for-the-badge&logo=React_Router&logoColor=white)
 
 <!-- PROJECT LOGO -->
 <div align="center">
@@ -50,18 +51,33 @@
 
 ## About The Project
 
-A web application for hotel management system, Allowing employees to manage everything about hotel bookings, cabins, and guests.
+An E-commerce web application used for buying furniture thing like chairs ...etc. this e-commerce has been made with authentication to be used with signing in only.
 
 ![Preview](<./img/home-page(3).png>)
 
 ### Features
 
+- Register
+  ![Preview](./img/register.png)
+- Login
+  ![Preview](./img/login.png)
 - Home Page
   ![Preview](<./img/home-page(5).png>)
-  ![Preview](<./img/home-page(1).png>)
   ![Preview](<./img/home-page(2).png>)
   ![Preview](<./img/home-page(3).png>)
   ![Preview](<./img/home-page(4).png>)
+- Shop
+  ![Preview](./img/shop-1.png)
+  ![Preview](./img/shop-2.png)
+- Single Product
+  ![Preview](<./img/product(1).png>)
+  ![Preview](<./img/product(2).png>)
+- Checkout
+  ![Preview](./img/checkout.png)
+- Cart
+  ![Preview](./img/cart.png)
+- Contact
+  ![Preview](./img/contact.png)
 
 ### Built With
 
