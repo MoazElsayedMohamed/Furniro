@@ -34,6 +34,7 @@ const MainContact = () => {
       toast.success("Your data is submitted successfully");
 
       return data;
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       throw new Error("Failed to fetch form data");
     }

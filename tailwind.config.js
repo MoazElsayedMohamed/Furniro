@@ -18,12 +18,6 @@ export const theme = {
     padding: "2rem",
   },
   extend: {
-    autofitGrid: {
-      "auto-fit": "repeat(auto-fit, minmax(200px, 1fr))",
-    },
-    backgroundImage: {
-      signIn: "url('/hero.png')",
-    },
     colors: {
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",

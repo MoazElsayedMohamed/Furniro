@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { useAuth } from "../context/AuthContext";
 
+// eslint-disable-next-line react/prop-types
 const NavIcons = ({ openMenu }) => {
   const [openCard, setOpenCard] = useState(false);
   const { token, username } = useAuth();

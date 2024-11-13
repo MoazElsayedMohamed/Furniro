@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
 import { Button } from "../components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import FormRow from "../components/FormRow";
@@ -51,7 +50,6 @@ const Register = () => {
 
   return (
     <section>
-      <Header />
       <div>
         <img
           src="/hero.jpeg"
@@ -102,8 +100,8 @@ const Register = () => {
             </Link>
           </p>
           <p className="text-xl text-gray-400 mt-4">
-            This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. <Link className="text-black font-semibold">Learn more.</Link>
+            This page is protected by Google reCAPTCHA to ensure you&apos;re not
+            a bot. <Link className="text-black font-semibold">Learn more.</Link>
           </p>
         </div>
       </div>

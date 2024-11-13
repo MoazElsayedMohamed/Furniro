@@ -90,12 +90,13 @@ An E-commerce web application used for buying furniture thing like chairs ...etc
 
 ---
 
-<!-- ### users
+### users
 
-| Email              | Password   |
-| ------------------ | ---------- |
-| <moaz@example.com> | moaz190120 |
+| Email                     | Password |
+| ------------------------- | -------- |
+| <moazelsayed12@gmail.com> | 12345678 |
 
+<!--
 #### Validation
 
 - **Email validation**: As per **RFC2822** standards.

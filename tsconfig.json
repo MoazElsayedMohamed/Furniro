@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Required for path mapping to work
+    "paths": {
+      "@/*": ["src/*"] // Map `@` to the `src` folder
+    },
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "outDir": "./dist",
+    "allowJs": true,
+    "target": "ES6"
+  },
+  "include": ["./src/**/*"]
+}

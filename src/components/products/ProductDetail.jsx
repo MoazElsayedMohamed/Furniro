@@ -1,15 +1,22 @@
 import React from "react";
-
 import Size from "./Size";
 import Color from "./Color";
-import Buttons from "./Buttons";
 import StarRating from "./StarRating";
 import Links from "./Links";
+// import ProductCount from "./ProductCount";
+// import { Button } from "../ui/button";
+// import { useCart } from "@/context/CartContext";
+import Buttons from "./Buttons";
 
+// eslint-disable-next-line react/prop-types
 const ProductDetail = ({ product }) => {
+  // eslint-disable-next-line react/prop-types
   const { name, price, long_desc } = product.attributes;
+  // eslint-disable-next-line react/prop-types
   const { rating } = product.attributes.reviews.data[0].attributes;
+  // eslint-disable-next-line react/prop-types
   const reviewsCount = product.attributes.reviews.data.length;
+  // const { addToCart } = useCart();
 
   return (
     <div>
@@ -27,6 +34,19 @@ const ProductDetail = ({ product }) => {
         </p>
         <Size product={product} />
         <Color />
+        {/* <div className="flex">
+          <ProductCount product={product} />
+          <Button
+            variant="outline1"
+            size="xl"
+            onClick={() => addToCart(product)}
+          >
+            add to cart
+          </Button>
+          <Button variant="outline1" size="xl">
+            + compare
+          </Button>
+        </div> */}
         <Buttons product={product} />
       </div>
       <Links product={product} />

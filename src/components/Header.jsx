@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import NavIcons from "./NavIcons";
 
-const Header = ({}) => {
+const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="flex items-center justify-around sm:max-xl:justify-between ">

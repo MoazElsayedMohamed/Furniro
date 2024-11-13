@@ -3,6 +3,7 @@ import { useCart } from "../context/CartContext";
 import { Button } from "./ui/button";
 import { useProduct } from "../context/ProductContext";
 
+// eslint-disable-next-line react/prop-types
 const CheckoutPrice = ({ handleSubmit }) => {
   const { productCount } = useProduct();
   let { item, totalPrice } = useCart();

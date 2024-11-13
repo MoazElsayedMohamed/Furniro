@@ -3,7 +3,8 @@ import { useProduct } from "../../context/ProductContext";
 import { useCart } from "../../context/CartContext";
 import { Button } from "../ui/button";
 
-const Buttons = ({product}) => {
+// eslint-disable-next-line react/prop-types
+const Buttons = ({ product }) => {
   const { addToCart } = useCart();
   const { productCount, handleCountDecrease, handleCountIncrease } =
     useProduct();

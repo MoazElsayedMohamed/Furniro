@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import FormRow from "../components/FormRow";
@@ -42,7 +41,6 @@ const Login = () => {
 
   return (
     <section>
-      <Header />
       <div>
         <img
           src="/hero.jpeg"
@@ -82,14 +80,14 @@ const Login = () => {
             </div>
           </form>
           <p className="text-xl text-gray-400">
-            Don't have an account?
+            Don&apos;t have an account?
             <Link className="underline text-black font-semibold" to="/register">
               Sign up
             </Link>
           </p>
           <p className="text-xl text-gray-400 mt-4">
-            This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. <Link className="text-black font-semibold">Learn more.</Link>
+            This page is protected by Google reCAPTCHA to ensure you&apos;re not
+            a bot. <Link className="text-black font-semibold">Learn more.</Link>
           </p>
         </div>
       </div>

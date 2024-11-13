@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useProduct } from "../context/ProductContext";
 
+// eslint-disable-next-line react/prop-types
 const ShoppingCart = ({ handleOpenCard }) => {
   const { cartItems, deleteCart, totalPrice } = useCart();
   const { productCount } = useProduct();
